@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Cat Gif" src="https://media.giphy.com/media/Maz1hoeGskARW/giphy.gif">
+  <img alt="Cat Gif" src="https://i.imgur.com/9z4r02l.png">
 </p>
 
 # Action Cats
