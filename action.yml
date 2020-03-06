@@ -1,10 +1,13 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Action Cats'
+description: 'Posts a cat gif on every PR as a reward for pushing code.'
+author: 'Ruairidh Wynne-McHardy'
+branding:
+  icon: 'code'  
+  color: 'blue'
 inputs:
-  myInput:              # change this
-    description: 'input description here'
-    default: 'default value if applicable'
+  GITHUB_TOKEN:        #Github token      
+    description: 'Github token for the repository.'
+    required: true
 runs:
   using: 'node12'
   main: 'dist/index.js'

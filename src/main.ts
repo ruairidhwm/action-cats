@@ -1,16 +1,27 @@
 import * as core from '@actions/core'
-import {wait} from './wait'
+import * as github from '@actions/github'
+import {catGifs} from './constants'
 
 async function run(): Promise<void> {
   try {
-    const ms: string = core.getInput('milliseconds')
-    core.debug(`Waiting ${ms} milliseconds ...`)
+    const randomCatGif = catGifs[Math.floor(Math.random() * catGifs.length)]
+    const message = `![Cat Gif](${randomCatGif})`
+    const githubToken = core.getInput('GITHUB_TOKEN')
 
-    core.debug(new Date().toTimeString())
-    await wait(parseInt(ms, 10))
-    core.debug(new Date().toTimeString())
+    const context = github.context
+    if (context.payload.pull_request == null) {
+      core.setFailed('No pull request found.')
+      return
+    }
+    const pullRequestNumber = context.payload.pull_request.number
 
-    core.setOutput('time', new Date().toTimeString())
+    const octokit = new github.GitHub(githubToken)
+
+    octokit.issues.createComment({
+      ...context.repo,
+      issue_number: pullRequestNumber,
+      body: message
+    })
   } catch (error) {
     core.setFailed(error.message)
   }

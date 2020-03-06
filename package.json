@@ -1,8 +1,8 @@
 {
-  "name": "typescript-action",
-  "version": "0.0.0",
-  "private": true,
-  "description": "TypeScript template action",
+  "name": "action-cats",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Posts a cat gif on every PR as a reward for pushing code.",
   "main": "lib/main.js",
   "scripts": {
     "build": "tsc",
@@ -15,17 +15,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/typescript-action.git"
+    "url": "git+https://github.com/ruairidhwm/action-cats.git"
   },
   "keywords": [
     "actions",
-    "node",
-    "setup"
+    "cats",
+    "github"
   ],
-  "author": "YourNameOrOrganization",
+  "author": {
+    "name": "Ruairidh Wynne-McHardy",
+    "url": "https://ruairidh.dev"
+  },
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.2.0"
+    "@actions/core": "^1.2.0",
+    "@actions/github": "^2.1.1"
   },
   "devDependencies": {
     "@types/jest": "^24.0.23",
