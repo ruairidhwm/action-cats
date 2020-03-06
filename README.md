@@ -16,3 +16,5 @@ This is just a novelty action, but feel free to use it. If you'd like to contrib
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
+
+Something changed!
