@@ -2024,7 +2024,7 @@ const constants_1 = __webpack_require__(582);
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const randomCatGif = constants_1.catGifs[Math.floor(Math.random() * constants_1.catGifs.length)];
+            const randomCatGif = constants_1.ramseyGifs[Math.floor(Math.random() * constants_1.ramseyGifs.length)];
             const message = `![Cat Gif](${randomCatGif})`;
             const githubToken = core.getInput('GITHUB_TOKEN');
             const context = github.context;
@@ -4227,7 +4227,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * don't need to deal with Giphy API
  * tokens in a public action etc.
  */
-const catGifs = [
+const ramseyGifs = [
     'https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif',
     'https://media.giphy.com/media/SRO0ZwmImic0/giphy.gif',
     'https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif',
@@ -4235,7 +4235,7 @@ const catGifs = [
     'https://media.giphy.com/media/y9hjvnO2bwJbO/giphy.gif',
     'https://media.giphy.com/media/QyJ0We4GHpjBa7PvKL/giphy.gif'
 ];
-exports.default = catGifs;
+exports.default = ramseyGifs;
 
 
 /***/ }),
@@ -8364,8 +8364,8 @@ function getPageLinks (link) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var catGifs_1 = __webpack_require__(337);
-exports.catGifs = catGifs_1.default;
+var ramseyGifs_1 = __webpack_require__(337);
+exports.ramseyGifs = ramseyGifs_1.default;
 
 
 /***/ }),

@@ -21,8 +21,8 @@ jobs:
     - uses: actions/checkout@v2
 
     # Runs a single command using the runners shell
-    - name: Action Cats
-      uses: ruairidhwm/action-cats@master
+    - name: Ramsey GIFifier
+      uses: ethan-dowler/ramsey-gififier@master
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

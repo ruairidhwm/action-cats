@@ -1,1 +1,1 @@
-export {default as catGifs} from './catGifs'
+export {default as ramseyGifs} from './ramseyGifs'

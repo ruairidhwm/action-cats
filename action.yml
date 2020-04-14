@@ -1,6 +1,6 @@
-name: 'Action Cats'
-description: 'Posts a cat gif on every PR as a reward for pushing code.'
-author: 'Ruairidh Wynne-McHardy'
+name: 'Ramsey GIFifier'
+description: 'Posts a Ramsey gif on every PR as a reward for pushing code.'
+author: 'Ruairidh Wynne-McHardy and Ethan Dowler'
 branding:
   icon: 'code'  
   color: 'blue'
