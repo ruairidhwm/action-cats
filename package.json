@@ -1,8 +1,8 @@
 {
-  "name": "action-cats",
+  "name": "ramsey-gififier",
   "version": "1.0.0",
   "private": false,
-  "description": "Posts a cat gif on every PR as a reward for pushing code.",
+  "description": "Posts a Ramsey gif on every PR as a reward for pushing code.",
   "main": "lib/main.js",
   "scripts": {
     "build": "tsc",
@@ -14,16 +14,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ruairidhwm/action-cats.git"
+    "url": "git+https://github.com/ethan-dowler/ramsey-gififier.git"
   },
   "keywords": [
     "actions",
-    "cats",
+    "ramsey",
     "github"
   ],
   "author": {
-    "name": "Ruairidh Wynne-McHardy",
-    "url": "https://ruairidh.dev"
+    "name": "Ruairidh Wynne-McHardy and Ethan Dowler"
   },
   "license": "MIT",
   "dependencies": {
