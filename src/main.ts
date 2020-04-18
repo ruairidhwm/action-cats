@@ -1,6 +1,5 @@
 import * as core from '@actions/core'
 import * as github from '@actions/github'
-import {catGifs} from './constants'
 
 async function run(): Promise<void> {
   try {
@@ -12,7 +11,6 @@ async function run(): Promise<void> {
       // body: JSON.stringify({})
     })
     const body = await tmp.json();
-    const randomCatGif = catGifs[Math.floor(Math.random() * catGifs.length)]
     const message = `![Cat Gif](${body["data"]["image_original_url"]})`
     const githubToken = core.getInput('GITHUB_TOKEN')
 

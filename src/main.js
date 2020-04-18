@@ -49,10 +49,9 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 exports.__esModule = true;
 var core = require("@actions/core");
 var github = require("@actions/github");
-var constants_1 = require("./constants");
 function run() {
     return __awaiter(this, void 0, void 0, function () {
-        var fetch_1, tmp, body, randomCatGif, message, githubToken, context, pullRequestNumber, octokit, error_1;
+        var fetch_1, tmp, body, message, githubToken, context, pullRequestNumber, octokit, error_1;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
@@ -69,7 +68,6 @@ function run() {
                     return [4 /*yield*/, tmp.json()];
                 case 2:
                     body = _a.sent();
-                    randomCatGif = constants_1.catGifs[Math.floor(Math.random() * constants_1.catGifs.length)];
                     message = "![Cat Gif](" + body["data"]["image_original_url"] + ")";
                     githubToken = core.getInput('GITHUB_TOKEN');
                     context = github.context;
