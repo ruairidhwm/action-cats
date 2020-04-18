@@ -12,9 +12,8 @@ async function run(): Promise<void> {
       // body: JSON.stringify({})
     })
     const body = await tmp.json();
-    console.log(body["data"]["image_original_url"])
     const randomCatGif = catGifs[Math.floor(Math.random() * catGifs.length)]
-    const message = `![Cat Gif](${randomCatGif})`
+    const message = `![Cat Gif](${body["data"]["image_original_url"]})`
     const githubToken = core.getInput('GITHUB_TOKEN')
 
     const context = github.context
