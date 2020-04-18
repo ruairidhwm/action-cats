@@ -1,11 +1,17 @@
 import * as core from '@actions/core'
 import * as github from '@actions/github'
-import {catGifs} from './constants'
 
 async function run(): Promise<void> {
   try {
-    const randomCatGif = catGifs[Math.floor(Math.random() * catGifs.length)]
-    const message = `![Cat Gif](${randomCatGif})`
+    const fetch = require("node-fetch");
+    const tmp = await fetch("http://api.giphy.com/v1/gifs/random?tag=cat", {
+      headers: {
+        "api_key":core.getInput('GIPHY_TOKEN')
+      }
+      // body: JSON.stringify({})
+    })
+    const body = await tmp.json();
+    const message = `![Cat Gif](${body["data"]["image_original_url"]})`
     const githubToken = core.getInput('GITHUB_TOKEN')
 
     const context = github.context
@@ -23,6 +29,7 @@ async function run(): Promise<void> {
       body: message
     })
   } catch (error) {
+    console.log("test 2")
     core.setFailed(error.message)
   }
 }

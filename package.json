@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ruairidhwm/action-cats.git"
+    "url": "git+https://github.com/denys-meloshyn/action-cats.git"
   },
   "keywords": [
     "actions",
@@ -27,8 +27,9 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.2.0",
-    "@actions/github": "^2.1.1"
+    "@actions/core": "^1.2.3",
+    "@actions/github": "^2.1.1",
+    "node-fetch": "^2.6.0"
   },
   "devDependencies": {
     "@types/jest": "^24.0.23",
