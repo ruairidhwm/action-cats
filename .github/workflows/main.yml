@@ -22,7 +22,7 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Action Cats
-      uses: denys-meloshyn/action-cats@giphy
+      uses: denys-meloshyn/action-cats@master
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GIPHY_TOKEN: ${{ secrets.GIPHY_TOKEN }}
