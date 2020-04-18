@@ -4,6 +4,16 @@ import {catGifs} from './constants'
 
 async function run(): Promise<void> {
   try {
+    console.log(core.getInput('GIPHY_TOKEN'))
+    const fetch = require("node-fetch");
+    const tmp = await fetch("http://api.giphy.com/v1/gifs/random?tag=cat&api_key=3JL5x0O11IARVLWA9jcqVzc88wE5Aap9Y&limit=5", {
+      headers: {
+        "api_key":core.getInput('GIPHY_TOKEN')
+      }
+      // body: JSON.stringify({})
+    })
+    const body = await tmp.json();
+    console.log(body["data"]["image_original_url"])
     const randomCatGif = catGifs[Math.floor(Math.random() * catGifs.length)]
     const message = `![Cat Gif](${randomCatGif})`
     const githubToken = core.getInput('GITHUB_TOKEN')
@@ -23,6 +33,7 @@ async function run(): Promise<void> {
       body: message
     })
   } catch (error) {
+    console.log("test 2")
     core.setFailed(error.message)
   }
 }
