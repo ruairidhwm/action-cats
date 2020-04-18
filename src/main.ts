@@ -4,9 +4,8 @@ import {catGifs} from './constants'
 
 async function run(): Promise<void> {
   try {
-    console.log(core.getInput('GIPHY_TOKEN'))
     const fetch = require("node-fetch");
-    const tmp = await fetch("http://api.giphy.com/v1/gifs/random?tag=cat&api_key=3JL5x0O11IARVLWA9jcqVzc88wE5Aap9Y&limit=5", {
+    const tmp = await fetch("http://api.giphy.com/v1/gifs/random?tag=cat", {
       headers: {
         "api_key":core.getInput('GIPHY_TOKEN')
       }
