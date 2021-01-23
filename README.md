@@ -12,9 +12,21 @@ This is just a novelty action, but feel free to use it. If you'd like to contrib
 
 ## Usage
 
-```yaml
- - name: Action Cats
-        uses: ruairidhwm/action-cats@master
+```yaml          
+name: Cats 😺
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - reopened
+
+jobs:
+  aCatForCreatingThePullRequest:
+    name: A cat for your effort!
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ruairidhwm/action-cats@1.0.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
