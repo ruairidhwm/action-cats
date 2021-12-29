@@ -14,7 +14,7 @@ const catGifs: string[] = [
   'https://github.com/ruairidhwm/action-cats/blob/master/assets/8.gif',
   'https://github.com/ruairidhwm/action-cats/blob/master/assets/9.gif',
   'https://github.com/ruairidhwm/action-cats/blob/master/assets/10.gif',
-  'https://github.com/ruairidhwm/action-cats/blob/master/assets/11.gif',
+  'https://github.com/ruairidhwm/action-cats/blob/master/assets/11.gif'
 ]
 
 export default catGifs
